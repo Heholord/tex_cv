@@ -1,0 +1,32 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": true,
+        "File": "cv_main.pdf"
+    },
+    "Session": {
+        "Bookmarks": [
+        ],
+        "CurrentFile": "cv_main.tex",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 23,
+                "EditorGroup": 0,
+                "FileName": "main_java.tex",
+                "FirstLine": 126,
+                "FoldedLines": "",
+                "Line": 241
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "cv_main.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 29
+            }
+        ],
+        "MasterFile": "",
+        "VerticalSplit": false
+    }
+}
