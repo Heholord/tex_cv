@@ -24,10 +24,29 @@
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 
-%\include{configs/config_ai.tex}
-\include{configs/config_data_eng.tex}
-%\include{configs/config_platform_eng.tex}
-%\include{configs/config_sw_architekt.tex}
+\usepackage{ifthen}
+
+\def\activeconfig{dataeng}  % Change this: ai, dataeng, platform, architect, dev
+
+\ifthenelse{\equal{\activeconfig}{ai}}{%
+	\include{configs/config_ai.tex}
+}{%
+	\ifthenelse{\equal{\activeconfig}{dataeng}}{%
+		\include{configs/config_data_eng.tex}
+	}{%
+		\ifthenelse{\equal{\activeconfig}{platform}}{%
+			\include{configs/config_platform_eng.tex}
+		}{%
+			\ifthenelse{\equal{\activeconfig}{architect}}{%
+				\include{configs/config_sw_architekt.tex}
+			}{
+				\ifthenelse{\equal{\activeconfig}{dev}}{%
+					\include{configs/config_sw_dev.tex}
+				}{}%
+			}%
+		}%
+	}%
+}
 
 %----------------------------------------------------------------------------------------
  
@@ -98,11 +117,9 @@
 \begin{entrylist}
 	\entry
 		{04/2026 -- Current}
-		{Software Architekt}
+		{\titlebeko}
 		{BEKO (Dedicated to the City of Vienna)}
-		{At Beko my primary customer is the City of Vienna. There I spearheaded the modernization and feature expansion of a mission-critical Document Management System (DMS). It's a dynamic project where I am working toghether with my team, on connecting the service to a personalized in-house AI Chatbot. I leed the containerization and cloud-native transformation of the legacy application for deployment on Red Hat OpenShift. At last, we migrated core identity and access management systems to Microsoft Entra ID, enhancing security compliance and user authorization workflows. \\ 
-			\texttt{LLMs} \slashsep \texttt{LangGraph} \slashsep \texttt{OpenShift} \slashsep \texttt{ArgoCD} \slashsep \texttt{JavaEE}  \slashsep \texttt{SpringBoot} \slashsep \texttt{Python}
-		}
+		{\textbeko}
 	\entry
 		{06/2020 -- 03/2026}
 		{Development Lead and Integration Specialist}
